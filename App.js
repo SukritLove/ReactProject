@@ -8,10 +8,11 @@ import { StyleSheet, Text, View } from 'react-native';
 // import LotsOfGreeting from './components/LotsOfGreeting';
 // import CustomText from './components/CustomText';
 // import ReHook from './components/ReHook';
-import Counter from './components/Counter';
-import IncrementCounter from './components/IncrementCounter';
-import MyTextInput from './components/MyTextInput';
-import Form from './components/Form';
+// import Counter from './components/Counter';
+// import IncrementCounter from './components/IncrementCounter';
+// import MyTextInput from './components/MyTextInput';
+// import Form from './components/Form';
+import Login from './components/Login';
 
 export default function App() {
   return (
@@ -19,7 +20,8 @@ export default function App() {
       {/* <Counter/>
       <IncrementCounter/> */}
       {/* <MyTextInput/> */}
-      <Form/>
+      {/* <Form/> */}
+      <Login/>
     </View>
   );
 }
