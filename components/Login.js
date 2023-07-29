@@ -7,15 +7,15 @@ const Login = () => {
 
   const checkTextInput = () => {
     //Check for the Name TextInput
-    if (name.length == 0 && email.length == 0){
+    if (name.trim() && email.trim()){
         alert("Please Enter Name & Email");
       return;
     }
-    if (name.length == 0) {
+    if (name.trim()) {
       alert("Please Enter Name");
       return;
     }
-    if (email.length == 0) {
+    if (email.trim()) {
       alert("Please Enter Email");
       return;
     }
