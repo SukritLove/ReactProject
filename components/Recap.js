@@ -1,26 +1,25 @@
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
-import { React, useState } from "react";
+import React, {useState } from "react";
 
 const Recap = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPass] = useState("");
+  const [email, setInputEmail] = useState('')
+  const [password, setInputPass] = useState('')
 
-  const checkTextInput = () => {
+  const checkTextInput = (email, password) => {
     //Check for the password TextInput
-    if (!email.trim() && !password.trim()) {
-      alert("Please Enter password & Email");
-      return;
-    }
-    if (!email.trim()) {
-      alert("Please Enter password");
-      return;
-    }
-    if (!password.trim()) {
-      alert("Please Enter Email");
-      return;
-    }
-    //Check for the Email TextInput
-    AlertInfo();
+    if (!email.trim() && !password.trim()){
+      alert("Please Enter Name & Email");
+    return;
+  }
+  if (!email.trim()) {
+    alert("Please Enter Name");
+    return;
+  }
+  if (!password.trim()) {
+    alert("Please Enter Email");
+    return;
+  }
+  AlertInfo()
   };
   const AlertInfo = () => {
     alert("Email : " + email + "\nPassword : " + password);
@@ -29,27 +28,22 @@ const Recap = () => {
   return (
     <View style={styles.container}>
       <TextInput
-        style={styles.input}
-        placeholder="Email"
-        valueE={email}
-        onChangeText={(valueE) => setEmail(valueE)}
+        style = {styles.input}
+        placeholder = "Email"
+        value={email}
+        onTextInput={(value) => setInputEmail(value)}
       />
-
       <TextInput
-        style={styles.input}
+        style = {styles.input}
         placeholder="Password"
-        valueP={password}
-        onChangeText={(valueP) => setPass(valueP)}
-      />
-
+        value={password}
+        onTextInput={(value) => setInputPass(value)}
+        />
       <Text>{"\n"}</Text>
-      <Button
-        style={styles.submitButton}
-        title="Submit"
-        onPress={() => {
-          checkTextInput();
-        }}
-      />
+      <Button>
+        style = {styles.submitButton}
+
+      </Button>
     </View>
   );
 };

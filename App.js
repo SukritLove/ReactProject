@@ -1,15 +1,16 @@
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import TouchableExample from './components/TouchableExample'
 
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Recap from './components/Recap';
-
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Recap/>
+    <View style= {styles.container}>
+     <TouchableExample/>
     </View>
-  );
+  )
 }
+
+export default App
 
 const styles = StyleSheet.create({
   container: {
