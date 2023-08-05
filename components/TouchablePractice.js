@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image, SafeAreaView } from "react-native";
 import React from "react";
 
 const TouchablePractice = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+    <View>
       <TouchableOpacity style={styles.buttonFacebookStyle}>
         <Image
           source={require("../assets/facebook.png")}
@@ -22,6 +23,7 @@ const TouchablePractice = () => {
         <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
       </TouchableOpacity>
     </View>
+    </SafeAreaView>
   );
 };
 
