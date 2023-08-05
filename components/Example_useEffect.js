@@ -13,7 +13,7 @@ const Example_useEffect = () => {
         // Handle sucessful response
         setData(response.data);
       })
-      .catch(() => {
+      .catch((error) => {
         // Handle Error
         console.error('Error fetcing data:', error);
       });

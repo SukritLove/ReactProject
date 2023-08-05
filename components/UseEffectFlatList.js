@@ -10,27 +10,27 @@ import axios from "axios";
 
 const UseEffectFlatList = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState();
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/postss")
+      .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
-        // Handle sucessful response
+        //Handle successful response
         setData(response.data);
         setIsLoading(false);
       })
-      .catch(() => {
-        // Handle Error
-        console.error("Error fetcing data:", Error);
-        setIsLoading(false);
-      });
-  }, []);
+      .catch((error)=>{
+        console.error('Error Fetching Data:', error)
+        setIsLoading(true)
+      })
+  }, []); //The empty dependency array ensures this effect runs only once when the component mounts.
 
   if (isLoading) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator animating size="large" color="#0000ff" />
+        <Text></Text>
       </View>
     );
   }
@@ -58,7 +58,7 @@ export default UseEffectFlatList;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 30,
+    padding: 40,
     backgroundColor: "#f0f0f0",
   },
   title: {
