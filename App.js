@@ -1,13 +1,10 @@
-
-import { StyleSheet, Text, View } from 'react-native';
-import Example_useEffect from './components/Example_useEffect';
-import UseEffectFlatList from './components/UseEffectFlatList';
+import { StyleSheet, Text, View } from "react-native";
+import RandomUsersScreen from "./components/RandomUsersScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <Example_useEffect/> */}
-      <UseEffectFlatList/>
+      <RandomUsersScreen />
     </View>
   );
 }
@@ -15,7 +12,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

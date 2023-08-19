@@ -22,7 +22,7 @@ const UseEffectFlatList = () => {
       })
       .catch((error)=>{
         console.error('Error Fetching Data:', error)
-        setIsLoading(true)
+        setIsLoading(true);
       })
   }, []); //The empty dependency array ensures this effect runs only once when the component mounts.
 
