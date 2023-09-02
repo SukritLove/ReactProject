@@ -2,7 +2,10 @@ import { Text, View, Button } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./Screen/HomeScreen";
+import FirstPage from "./Pages/FirstPage";
+import SecondPage from "./Pages/SecondPage";
+import ThirdPage from "./Pages/ThirdPage";
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -20,12 +23,9 @@ const App = () => {
           },
         }}
       >
-        <Stack.Screen
-          name="FirstPage"
-          component={HomeScreen}
-          options={{ title: "OverView" }}
-          initialParams={{itemId:'43'}}
-        />
+        <Stack.Screen name="FirstPage" component={FirstPage} />
+        <Stack.Screen name="SecondPage" component={SecondPage} />
+        <Stack.Screen name="ThirdPage" component={ThirdPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
