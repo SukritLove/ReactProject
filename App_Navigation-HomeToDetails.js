@@ -2,9 +2,8 @@ import { Text, View, Button } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import FirstPage from "./Pages/FirstPage";
-import SecondPage from "./Pages/SecondPage";
-import ThirdPage from "./Pages/ThirdPage";
+import HomeScreen from "./Screen/HomeScreen";
+import DetailsScreen from "./Screen/DetailsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,15 +16,19 @@ const App = () => {
           headerStyle: {
             backgroundColor: "#008b8b",
           },
-          headerTintColor: "#ffff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
+          headerTintColor:'#ffff',
+          headerTitleStyle:{
+            fontWeight:'bold'
+          }
         }}
       >
-        <Stack.Screen name="FirstPage" component={FirstPage} />
-        <Stack.Screen name="SecondPage" component={SecondPage} />
-        <Stack.Screen name="ThirdPage" component={ThirdPage} />
+        {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "OverView" }}
+        />
+        <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
