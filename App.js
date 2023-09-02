@@ -9,6 +9,7 @@ export default function App() {
       {/* <FlastListAPI/>
       <News/> */}
 <ProductScreen/>
+
     </View>
   );
 }
