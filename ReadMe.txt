@@ -1,6 +1,11 @@
 StudentID : 2013110040
 StudentName : Sukrit Rerk-u-cote
-DateToStudy : 2-September-2023
+DateToStudy : 9-September-2023
 ClassTopic : 
-1. React Navigator : Stack Navigator
-2. In-class exercise
+Lecture #10 [September 9, 2023]: Class Agenda
+
+- React Navigator : Stack Navigator with passing parameters to routes
+
+- React Navigator : Drawer Navigator
+
+- In-class exercise
