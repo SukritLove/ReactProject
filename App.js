@@ -16,7 +16,6 @@ const Drawer = createDrawerNavigator();
 function FirstScreenStack() {
   return (
     <Stack.Navigator
-      stack
       screenOptions={{
         headerStyle: {
           backgroundColor: "#ffffba",
